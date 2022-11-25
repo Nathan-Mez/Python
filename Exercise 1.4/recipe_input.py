@@ -23,6 +23,7 @@ def take_recipe():
     cooking_time = int(input('Enter cooking time?   '))
     ingredients = input('Enter the ingredients for this recipe?   ')
     ingredients = ingredients.split()
+    ingredients = [ingredient.lower() for ingredient in ingredients]
 
     recipe = {'name': name, 'cooking_time': cooking_time, 'ingredients': ingredients }
     difficluty = calc_difficulty(recipe)
